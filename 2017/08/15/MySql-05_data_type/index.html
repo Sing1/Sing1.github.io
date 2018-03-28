@@ -1,0 +1,145 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="不知道描述啥"><title>MySql_05 MySQL中的数据类型 | Sing</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/8.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">MySql_05 MySQL中的数据类型</h1><a id="logo" href="/.">Sing</a><p class="description">笔记</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa undefined"> 首页</i></a><a href="/django"><i class="fa undefined"> Django</i></a><a href="/html_css"><i class="fa undefined"> Html_css</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">MySql_05 MySQL中的数据类型</h1><div class="post-meta">Aug 15, 2017<span> | </span><span class="category"><a href="/categories/MySql/">MySql</a></span></div><div class="post-content"><h4 id="MySQL中的数据类型大概包含："><a href="#MySQL中的数据类型大概包含：" class="headerlink" title="MySQL中的数据类型大概包含："></a>MySQL中的数据类型大概包含：</h4><ul>
+<li>整数类型</li>
+<li>浮点类型</li>
+<li>字符串类型</li>
+<li>日期时间类型</li>
+<li>二进制类型</li>
+</ul>
+<h5 id="1、整数类型"><a href="#1、整数类型" class="headerlink" title="1、整数类型:"></a>1、整数类型:</h5><table>
+<thead>
+<tr>
+<th>数据类型</th>
+<th>存储范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TINYINT</td>
+<td>有符号值：-128 到 127（-2<sup>7</sup> 到 2<sup>7</sup>-1）<br> 无符号值：0 到 255（0 到 2<sup>8</sup>-1）</td>
+</tr>
+<tr>
+<td>SMALLINT</td>
+<td>有符号值：-32768 到 32768（-2<sup>15</sup> 到 2<sup>15</sup>-1）<br> 无符号值：0 到 65535（0 到 2<sup>16</sup>-1）</td>
+</tr>
+<tr>
+<td>MEDIUMINT</td>
+<td>有符号值：-8388608 到 8388607（-2<sup>23</sup> 到 2<sup>23</sup>-1）<br> 无符号值：0 到 16777215（0 到 2<sup>24</sup>-1）</td>
+</tr>
+<tr>
+<td>INT</td>
+<td>有符号值：-2147683648 到 2147683647（-2<sup>31</sup> 到 2<sup>31</sup>-1）<br> 无符号值：0 到 4294967295（0 到 2<sup>32</sup>-1）</td>
+</tr>
+<tr>
+<td>BIGINT</td>
+<td>有符号值：-9223372036854775808 到 9223373036854775807(-2<sup>63</sup> 到 2<sup>63</sup>-1)<br> 无符号值：0 到 18446744073709551615（0 到 2<sup>64</sup>-1）</td>
+</tr>
+<tr>
+<td>BOOL,BOOLEAN</td>
+<td>等价于TINYINT(1),0为false,其余为true</td>
+</tr>
+</tbody>
+</table>
+<p>取值范围无需记住，我们可以通过帮助手册来查询，例如我们忘记了 TINYINT 的取值范围：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; help TINYINT</span><br><span class="line">Name: 'TINYINT'</span><br><span class="line">Description:</span><br><span class="line">TINYINT[(M)] [UNSIGNED] [ZEROFILL]</span><br><span class="line"></span><br><span class="line">A very small integer. The signed range is -128 to 127. The unsigned</span><br><span class="line">range is 0 to 255.</span><br><span class="line"></span><br><span class="line">URL: http://dev.mysql.com/doc/refman/5.7/en/numeric-type-overview.html</span><br></pre></td></tr></table></figure>
+<p>我们有三种方法查看手册：  </p>
+<ul>
+<li>help TINYINT</li>
+<li>? TINYINT</li>
+<li>\h TINYINT</li>
+</ul>
+<h5 id="2、浮点类型"><a href="#2、浮点类型" class="headerlink" title="2、浮点类型:"></a>2、浮点类型:</h5><table>
+<thead>
+<tr>
+<th>数据类型</th>
+<th>存储范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FLOAT[(M,D)]</td>
+<td>负数取值范围为-3.40E+38到-1.17E-38、0和1.175E-38到3.40E+38。<br>M是数字总位数，D是小数点后面的位数。如果M和D被省略，根据硬件允许的限制来保存值。单精度浮点数精确到大约7位小数位。</td>
+</tr>
+<tr>
+<td>DOUBLE[(M,D)]</td>
+<td>-1.79E+308到-2.22E-308、0和2.22E-308到1.79E+308。</td>
+</tr>
+<tr>
+<td>DECIMAL[(M,D)]</td>
+<td>和DOUBLE一样，内部以字符串形式存储数值</td>
+</tr>
+</tbody>
+</table>
+<h5 id="3、字符串类型"><a href="#3、字符串类型" class="headerlink" title="3、字符串类型:"></a>3、字符串类型:</h5><table>
+<thead>
+<tr>
+<th>列表型</th>
+<th>存储需求</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CHAR(M,D)</td>
+<td>M个字节，0 &lt;= M &lt;= 255</td>
+</tr>
+<tr>
+<td>VARCHAR(M)</td>
+<td>L+1个字节，其中L&lt;= M 且 0 &lt;= M &lt;= 65535</td>
+</tr>
+<tr>
+<td>TINYTEXT</td>
+<td>L+1个字节，其中 L &lt; 2<sup>8</sup></td>
+</tr>
+<tr>
+<td>TEXT</td>
+<td>L+2个字节，其中 L &lt; 2<sup>16</sup></td>
+</tr>
+<tr>
+<td>MEDIUMTEXT</td>
+<td>L+3个字节，其中 L &lt; 2<sup>24</sup></td>
+</tr>
+<tr>
+<td>LONGTEXT</td>
+<td>L+4个字节，其中 L &lt; 2<sup>32</sup></td>
+</tr>
+<tr>
+<td>ENUM(‘value1’,’value2’,…)</td>
+<td>1或2字节，取决于枚举值个数，最多65636个值</td>
+</tr>
+<tr>
+<td>SET(‘value1’,’value2’,…)</td>
+<td>1或2字节，取决于SET成员的个数，最多64个值</td>
+</tr>
+</tbody>
+</table>
+<h5 id="4、日期时间类型"><a href="#4、日期时间类型" class="headerlink" title="4、日期时间类型:"></a>4、日期时间类型:</h5><table>
+<thead>
+<tr>
+<th>列表型</th>
+<th>存储范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TIME</td>
+<td>-838:59:59~838:59:59</td>
+</tr>
+<tr>
+<td>DATE</td>
+<td>1000-01-01~9999-12-31</td>
+</tr>
+<tr>
+<td>DATETIME</td>
+<td>1000-01-01 00:00:00~9999-12-31 23:59:59</td>
+</tr>
+<tr>
+<td>TIMESTAMP</td>
+<td>1970-01-01 00:00:01 UTC~2038-01-19 03:14:07</td>
+</tr>
+<tr>
+<td>YEAR</td>
+<td>1901~2155</td>
+</tr>
+</tbody>
+</table>
+<h5 id="5、二进制类型"><a href="#5、二进制类型" class="headerlink" title="5、二进制类型"></a>5、二进制类型</h5><p>一般保存二进制文件，用的比较少</p>
+</div><div class="tags"></div><div class="post-nav"><a class="pre" href="/2017/08/16/MySql-06_storage_engine/">MySql_06 存储引擎</a><a class="next" href="/2017/08/15/MySql-04_journal/">MySql_04 修改分隔符及导出语句</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Android/">Android</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JAVA/">JAVA</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MySql/">MySql</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/教程/">教程</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/设计模式/">设计模式</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/03/19/Android_CountDownTimer/">CountDownTimer的使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/05/Android_decompile/">Android 反编译</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/01/Android_dialog_shadow/">Android 使用Dialog时状态栏变黑的问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/21/Python_Django_simple_server/">基于 Python 的简单服务</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/21/Android_about_image/">Android 图片相关操作</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/16/DesignPattern_01_Principle/">《设计模式》走向灵活软件之路--面向对象的六大原则</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/13/MySql-17_indexes/">MySql_17 MySQL中的索引</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/10/Android_Application_Analysis/">Application 全面解析</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/30/Android_Glide_Basice/">Glide基础入门</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/29/MySql-16_function_library/">MySql_16 MySQL中的数学函数库</a></li></ul></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2018 <a href="/." rel="nofollow">Sing.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/3.2.5/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/3.2.5/jquery.fancybox.min.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="不知道描述啥"><title>HTML的语法 | Sing</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/8.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">HTML的语法</h1><a id="logo" href="/.">Sing</a><p class="description">笔记</p></div><div id="nav-menu"><a href="/."><i class="fa undefined"> 首页</i></a><a href="/django"><i class="fa undefined"> Django</i></a><a class="current" href="/html_css"><i class="fa undefined"> Html_css</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">HTML的语法</h1><div class="post-content"><h3 id="1、什么是HTML标记语言"><a href="#1、什么是HTML标记语言" class="headerlink" title="1、什么是HTML标记语言"></a>1、什么是HTML标记语言</h3><p>HTML标记语言表示网页信息的符号标记语言。特点如下：</p>
+<ul>
+<li>可以设置文本的格式，比如标题、字号、文本颜色、段落等等</li>
+<li>可以创建列表</li>
+<li>可以插入图像和媒体</li>
+<li>可以建立表格</li>
+<li>超链接，可以使用鼠标点击超链接来实现页面之间的跳转</li>
+</ul>
+<h3 id="2、HTML的标记和他的属性"><a href="#2、HTML的标记和他的属性" class="headerlink" title="2、HTML的标记和他的属性"></a>2、HTML的标记和他的属性</h3><h4 id="HTML文档的保存格式"><a href="#HTML文档的保存格式" class="headerlink" title="HTML文档的保存格式"></a>HTML文档的保存格式</h4><ul>
+<li>.html</li>
+<li>.htm</li>
+<li>.xhtml</li>
+</ul>
+<h4 id="标记和被标记的内容构建出HTML文档"><a href="#标记和被标记的内容构建出HTML文档" class="headerlink" title="标记和被标记的内容构建出HTML文档"></a>标记和被标记的内容构建出HTML文档</h4><p>格式：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">标记</span>&gt;</span></span><br><span class="line">内容</span><br><span class="line"><span class="tag">&lt;/<span class="name">标记</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="标记的属性"><a href="#标记的属性" class="headerlink" title="标记的属性"></a>标记的属性</h4><p>标记的属性，就是用来控制我们的内容（图像、文本等的）如何的显示<br>格式：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">标记</span> 属性<span class="attr">1</span>=<span class="string">属性值</span> 属性<span class="attr">2</span>=<span class="string">属性值</span> <span class="attr">...</span> <span class="attr">...</span> &gt;</span>内容<span class="tag">&lt;/<span class="name">标记</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">bgcolor</span>=<span class="string">"red"</span>&gt;</span>内容<span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>以上的属性是用来控制我们的网页的背景颜色，bgcolor就是body的属性，他的值是red（红色）</p>
+<h3 id="3、语法不区分字母大小写"><a href="#3、语法不区分字母大小写" class="headerlink" title="3、语法不区分字母大小写"></a>3、语法不区分字母大小写</h3><p>&lt;HTML&gt;、&lt;Html&gt;、&lt;html&gt;都是定义相同的标记，但是在编写网页的时候尽量使用小写</p>
+<h3 id="4、文档注释"><a href="#4、文档注释" class="headerlink" title="4、文档注释"></a>4、文档注释</h3><p>注释一段内容时使用“<!--”开始，以"-->“结束，例如：  </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--我是这个网页的作者--&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="5、代码格式"><a href="#5、代码格式" class="headerlink" title="5、代码格式"></a>5、代码格式</h3><p>空格键和回车键在网页中都不会起到任何作用，我们为了让代码清晰易读，可以使用空格和回车键进行编排。<br>注意：缩进时保持严格的规则，以<code>Tab</code>键进行缩进！</p>
+<h3 id="6、字符实体"><a href="#6、字符实体" class="headerlink" title="6、字符实体"></a>6、字符实体</h3><h4 id="什么是字符实体？"><a href="#什么是字符实体？" class="headerlink" title="什么是字符实体？"></a>什么是字符实体？</h4><p>比如我们想在网页上面显示一个“&lt;”小于符号，但是“&lt;”在HTML中是文档标记的开始语言，如果我们直接使用“&lt;”会出差错，所以我们就会一些实体名称来代替！</p>
+<h4 id="常见的字符实体"><a href="#常见的字符实体" class="headerlink" title="常见的字符实体"></a>常见的字符实体</h4><table>
+<thead>
+<tr>
+<th>显示结果</th>
+<th>描述</th>
+<th>实体名称</th>
+<th>实体编号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&nbsp;</td>
+<td>空格</td>
+<td>&amp;nbsp;</td>
+<td>&amp;#160;</td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>小于号</td>
+<td>&amp;lt;</td>
+<td>&amp;#60;</td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td>大于号</td>
+<td>&amp;gt;</td>
+<td>&amp;#62;</td>
+</tr>
+<tr>
+<td>&amp;</td>
+<td>和号</td>
+<td>&amp;amp;</td>
+<td>&amp;#38;</td>
+</tr>
+<tr>
+<td>&quot;</td>
+<td>引号</td>
+<td>&amp;quot;</td>
+<td>&amp;#34;</td>
+</tr>
+<tr>
+<td>&apos;</td>
+<td>撇号</td>
+<td>&amp;apos; (IE不支持)</td>
+<td>&amp;#39;</td>
+</tr>
+<tr>
+<td>&cent;</td>
+<td>分</td>
+<td>&amp;cent;</td>
+<td>&amp;#162;</td>
+</tr>
+<tr>
+<td>&pound;</td>
+<td>镑</td>
+<td>&amp;pound;</td>
+<td>&amp;#163;</td>
+</tr>
+<tr>
+<td>&yen;</td>
+<td>日圆</td>
+<td>&amp;yen;</td>
+<td>&amp;#165;</td>
+</tr>
+<tr>
+<td>&euro;</td>
+<td>欧元</td>
+<td>&amp;euro;</td>
+<td>&amp;#8364;</td>
+</tr>
+<tr>
+<td>&sect;</td>
+<td>小节</td>
+<td>&amp;sect;</td>
+<td>&amp;#167;</td>
+</tr>
+<tr>
+<td>&copy;</td>
+<td>版权</td>
+<td>&amp;copy;</td>
+<td>&amp;#169;</td>
+</tr>
+<tr>
+<td>&reg;</td>
+<td>注册商标</td>
+<td>&amp;reg;</td>
+<td>&amp;#174;</td>
+</tr>
+<tr>
+<td>&trade;</td>
+<td>商标</td>
+<td>&amp;trade;</td>
+<td>&amp;#8482;</td>
+</tr>
+<tr>
+<td>&times;</td>
+<td>乘号</td>
+<td>&amp;times;</td>
+<td>&amp;#215;</td>
+</tr>
+<tr>
+<td>&divide;</td>
+<td>除号</td>
+<td>&amp;divide;</td>
+<td>&amp;#247;</td>
+</tr>
+</tbody>
+</table>
+</div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Android/">Android</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JAVA/">JAVA</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MySql/">MySql</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/教程/">教程</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/设计模式/">设计模式</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/03/19/Android_CountDownTimer/">CountDownTimer的使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/05/Android_decompile/">Android 反编译</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/01/Android_dialog_shadow/">Android 使用Dialog时状态栏变黑的问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/21/Python_Django_simple_server/">基于 Python 的简单服务</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/21/Android_about_image/">Android 图片相关操作</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/16/DesignPattern_01_Principle/">《设计模式》走向灵活软件之路--面向对象的六大原则</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/13/MySql-17_indexes/">MySql_17 MySQL中的索引</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/10/Android_Application_Analysis/">Application 全面解析</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/30/Android_Glide_Basice/">Glide基础入门</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/29/MySql-16_function_library/">MySql_16 MySQL中的数学函数库</a></li></ul></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2018 <a href="/." rel="nofollow">Sing.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/3.2.5/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/3.2.5/jquery.fancybox.min.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
