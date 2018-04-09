@@ -1,0 +1,122 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="不知道描述啥"><title>CSS 常见属性 | Sing</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/8.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">CSS 常见属性</h1><a id="logo" href="/.">Sing</a><p class="description">笔记</p></div><div id="nav-menu"><a href="/."><i class="fa undefined"> 首页</i></a><a href="/django"><i class="fa undefined"> Django</i></a><a class="current" href="/html_css"><i class="fa undefined"> Html_css</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Android/">Android</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JAVA/">JAVA</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MySql/">MySql</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/教程/">教程</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/设计模式/">设计模式</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/03/29/Python_crawler/">用 Python 编写一个简单的爬虫</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/19/Android_CountDownTimer/">CountDownTimer的使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/05/Android_decompile/">Android 反编译</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/01/Android_dialog_shadow/">Android 使用Dialog时状态栏变黑的问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/21/Python_Django_simple_server/">基于 Python 的简单服务</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/21/Android_about_image/">Android 图片相关操作</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/16/DesignPattern_01_Principle/">《设计模式》走向灵活软件之路--面向对象的六大原则</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/13/MySql-17_indexes/">MySql_17 MySQL中的索引</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/10/Android_Application_Analysis/">Application 全面解析</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/30/Android_Glide_Basice/">Glide基础入门</a></li></ul></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">CSS 常见属性</h1><div class="post-content"><h3 id="1、颜色属性"><a href="#1、颜色属性" class="headerlink" title="1、颜色属性"></a>1、颜色属性</h3><p>color：定义文本的颜色，几种写法：</p>
+<ul>
+<li>color：green</li>
+<li>color：#ff6600</li>
+<li>color：#f60，简写式</li>
+<li>color：rgb(255,255,255)，红(R)、绿(G)、蓝(B) 每个的取值范围0~255</li>
+<li>color：rgba(255,255,255,1)，RGBA是代表Red（红） Green（绿） Blue（蓝）和 Alpha(透明度)</li>
+</ul>
+<h3 id="2、字体属性"><a href="#2、字体属性" class="headerlink" title="2、字体属性"></a>2、字体属性</h3><ul>
+<li>font-size：字体大小，font-size:14px</li>
+<li>font-family：定义字体，font-family:微软雅黑,serif;，可以使用“,”隔开，当字体不存在的时候直接使用下一个</li>
+<li>font-weight：字体加粗，normal(默认值)、bold(粗)、bolder(更粗)、lighter(更细)、100、200、300~900</li>
+</ul>
+<h3 id="3、背景属性"><a href="#3、背景属性" class="headerlink" title="3、背景属性"></a>3、背景属性</h3><ul>
+<li>background-color：背景颜色 </li>
+<li>background-image：背景图片 </li>
+<li>background-repeat：背景重复，repeat（重复平铺满）、repeat-x（向Y轴重复）、repeat-y（向Y轴重复）、no-repeat（不重复） </li>
+<li>background-position：背景位置，横向（left,center,right）、纵向（top,center,bottom）</li>
+</ul>
+<h4 id="简写方式："><a href="#简写方式：" class="headerlink" title="简写方式："></a>简写方式：</h4><p>background:背景颜色 url(图像) 重复 位置</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background:#f60 url(images/bg.jpg) no-repeat top center</span><br></pre></td></tr></table></figure>
+<h3 id="4、文本属性"><a href="#4、文本属性" class="headerlink" title="4、文本属性"></a>4、文本属性</h3><ul>
+<li>text-align：横向排列，left，center，right</li>
+<li>line-height：文本行高，%基于字体大小的百分比行高、数值来设置固定值</li>
+<li>text-indent：首行缩进</li>
+<li>letter-spacing：字符间距，normal（默认）、length（具体数值）、inherit（继承）</li>
+</ul>
+<h3 id="5、边框属性"><a href="#5、边框属性" class="headerlink" title="5、边框属性"></a>5、边框属性</h3><h4 id="边框风格-border-style"><a href="#边框风格-border-style" class="headerlink" title="边框风格 border-style"></a>边框风格 border-style</h4><p>1）统一风格：border-style<br>2）单独风格：</p>
+<ul>
+<li>border-bottom-style：下边边框样式</li>
+<li>border-top-style：上边边框样式</li>
+<li>border-left-style：左边边框样式</li>
+<li>border-right-style：右边边框样式</li>
+</ul>
+<p>3）边框风格样式的属性值</p>
+<ul>
+<li>none：无边框</li>
+<li>solid：直线边框</li>
+<li>dashed：虚线边框</li>
+<li>dotted：点状边框</li>
+<li>double：双线边框</li>
+<li>groove：凸槽边框（依托border-color的属性值）</li>
+<li>ridge：垄状边框（依托border-color的属性值）</li>
+<li>inset：inset边框（依托border-color的属性值）</li>
+<li>outset：outset边框（依托border-color的属性值）</li>
+<li>inherit：继承 </li>
+</ul>
+<h4 id="边框宽度-border-width"><a href="#边框宽度-border-width" class="headerlink" title="边框宽度 border-width"></a>边框宽度 border-width</h4><p>1）统一风格：border-width：<br>2）单独风格：</p>
+<ul>
+<li>border-top-width：上边边框宽度</li>
+<li>border-bottom-width：下边边框宽度</li>
+<li>border-left-width：左边边框宽度</li>
+<li>border-right-width：右边边框宽度</li>
+</ul>
+<p>3）边框宽度的属性值：</p>
+<ul>
+<li>thin：细边框</li>
+<li>medium：中等边框</li>
+<li>thick：粗边框</li>
+<li>px： 固定值的边框</li>
+<li>inherit：继承</li>
+</ul>
+<h4 id="边框颜色-border-color"><a href="#边框颜色-border-color" class="headerlink" title="边框颜色 border-color"></a>边框颜色 border-color</h4><p>1）统一风格：border-color<br>2）单独风格</p>
+<ul>
+<li>border-top-color：上边边框颜色</li>
+<li>border-bottom-color：下边边框颜色</li>
+<li>border-left-color：左边边框颜色</li>
+<li>border-right-color：右边边框颜色</li>
+</ul>
+<p>3）属性值</p>
+<ul>
+<li>颜色值的名称：red、green</li>
+<li>RGB：rgb(255,255,0)</li>
+<li>RGBA：rgba(255,255,0,0.1)</li>
+<li>十六位进制：#ff0、#ff0000</li>
+<li>继承inherit</li>
+</ul>
+<p>4）属性值的四种情况</p>
+<ul>
+<li>一个值：border-color：（上、下、左、右）；</li>
+<li>两个值：border-color：（上下） （左右）；</li>
+<li>三个值：border-color:（上） （左、右） （下）;</li>
+<li>四个值：border-color：（上）（右）（下）（左）;</li>
+</ul>
+<h4 id="简写方式"><a href="#简写方式" class="headerlink" title="简写方式"></a>简写方式</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">border：solid 2px #f60</span><br></pre></td></tr></table></figure>
+<h3 id="6、列表属性"><a href="#6、列表属性" class="headerlink" title="6、列表属性"></a>6、列表属性</h3><h4 id="标记的类型"><a href="#标记的类型" class="headerlink" title="标记的类型"></a>标记的类型</h4><p>list-style-type，值：</p>
+<ul>
+<li>none：无标记。</li>
+<li>disc：默认。标记是实心圆。</li>
+<li>circle：标记是空心圆。</li>
+<li>square：标记是实心方块。</li>
+<li>decimal：标记是数字。</li>
+<li>decimal-leading-zero：0开头的数字标记。(01, 02, 03, 等。)</li>
+<li>lower-roman：小写罗马数字(i, ii, iii, iv, v, 等。)</li>
+<li>upper-roman：大写罗马数字(I, II, III, IV, V, 等。)</li>
+<li>lower-alpha：小写英文字母The marker is lower-alpha (a, b, c, d, e, 等。)</li>
+<li>upper-alpha：大写英文字母The marker is upper-alpha (A, B, C, D, E, 等。)</li>
+<li>lower-greek：小写希腊字母(alpha, beta, gamma, 等。)</li>
+<li>lower-latin：小写拉丁字母(a, b, c, d, e, 等。)</li>
+<li>upper-latin：大写拉丁字母(A, B, C, D, E, 等。)</li>
+<li>hebrew：传统的希伯来编号方式</li>
+<li>armenian：传统的亚美尼亚编号方式</li>
+<li>georgian：传统的乔治亚编号方式(an, ban, gan, 等。)</li>
+<li>cjk-ideographic：简单的表意数字</li>
+<li>hiragana：标记是：a, i, u, e, o, ka, ki, 等。（日文片假名）</li>
+<li>katakana：标记是：A, I, U, E, O, KA, KI, 等。（日文片假名）</li>
+<li>hiragana-iroha：标记是：i, ro, ha, ni, ho, he, to, 等。（日文片假名）</li>
+<li>katakana-iroha：标记是：I, RO, HA, NI, HO, HE, TO, 等。（日文片假名）</li>
+</ul>
+<h4 id="标记的位置"><a href="#标记的位置" class="headerlink" title="标记的位置"></a>标记的位置</h4><p>list-style-position，值：</p>
+<ul>
+<li>inside：列表项目标记放置在文本以内，且环绕文本根据标记对齐。</li>
+<li>outside：默认值。保持标记位于文本的左侧。列表项目标记放置在文本以外，且环绕文本不根据标记对齐。</li>
+<li>inherit：规定应该从父元素继承 list-style-position 属性的值。</li>
+</ul>
+<h4 id="设置图像列表标记"><a href="#设置图像列表标记" class="headerlink" title="设置图像列表标记"></a>设置图像列表标记</h4><p>list-style-image，URL图像的路径，值：</p>
+<ul>
+<li>none：默认。无图形被显示。</li>
+<li>inherit：规定应该从父元素继承 list-style-image 属性的值。</li>
+</ul>
+<h4 id="简写方式-1"><a href="#简写方式-1" class="headerlink" title="简写方式"></a>简写方式</h4><p>list-style:square inside url(&#39;/i/arrow.jpg&#39;);</p>
+</div></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2018 <a rel="nofollow" target="_blank" href="http://www.miitbeian.gov.cn/">京ICP备17062560号</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/3.2.5/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/3.2.5/jquery.fancybox.min.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
