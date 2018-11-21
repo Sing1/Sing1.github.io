@@ -1,0 +1,71 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="不知道描述啥"><title>DIV+CSS布局 | Sing</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/8.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">DIV+CSS布局</h1><a id="logo" href="/.">Sing</a><p class="description">笔记</p></div><div id="nav-menu"><a href="/."><i class="fa undefined"> 首页</i></a><a href="/django"><i class="fa undefined"> Django</i></a><a class="current" href="/html_css"><i class="fa undefined"> Html_css</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Android/">Android</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JAVA/">JAVA</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MySql/">MySql</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/教程/">教程</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/设计模式/">设计模式</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/05/28/Android_photo_and_cutimage/">Android 适配7.0拍照、图库、裁剪</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/18/Linux_install_tomcat/">Linux 环境下安装 Tomcat</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/17/Linux_install_jdk/">Linux 环境下安装 JDK</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/11/Linux_install_mysql/">Linux 环境下安装MySql</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/29/Python_crawler/">用 Python 编写一个简单的爬虫</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/19/Android_CountDownTimer/">CountDownTimer的使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/05/Android_decompile/">Android 反编译</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/01/Android_dialog_shadow/">Android 使用Dialog时状态栏变黑的问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/21/Python_Django_simple_server/">基于 Python 的简单服务</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/21/Android_about_image/">Android 图片相关操作</a></li></ul></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">DIV+CSS布局</h1><div class="post-content"><h3 id="1、div和span"><a href="#1、div和span" class="headerlink" title="1、div和span"></a>1、div和span</h3><ul>
+<li>DIV和SPAN在整个HTML标记中，没有任何意义，他们的存在就是为了应用CSS样式</li>
+<li>DIV和span的区别在与：span是内联元素，div是块级元素</li>
+</ul>
+<h3 id="2、盒模型"><a href="#2、盒模型" class="headerlink" title="2、盒模型"></a>2、盒模型</h3><ul>
+<li>margin：盒子外边距</li>
+<li>padding：盒子内边距</li>
+<li>border：盒子边框宽度</li>
+<li>width：盒子宽度</li>
+<li>height：盒子高度</li>
+</ul>
+<h3 id="3、布局相关的属性"><a href="#3、布局相关的属性" class="headerlink" title="3、布局相关的属性"></a>3、布局相关的属性</h3><h4 id="1、position-定位方式"><a href="#1、position-定位方式" class="headerlink" title="1、position 定位方式"></a>1、position 定位方式</h4><ul>
+<li>relative：正常定位</li>
+<li>absolute：根据父元素进行定位</li>
+<li>fixed：根据浏览器窗口进行定位</li>
+<li>static：没有定位</li>
+<li>inherit：继承</li>
+</ul>
+<h4 id="2、定位"><a href="#2、定位" class="headerlink" title="2、定位"></a>2、定位</h4><ul>
+<li>left：左</li>
+<li>right：右</li>
+<li>top：上</li>
+<li>bottom：下</li>
+</ul>
+<h4 id="3、z-index-层覆盖先后顺序（优先级）"><a href="#3、z-index-层覆盖先后顺序（优先级）" class="headerlink" title="3、z-index 层覆盖先后顺序（优先级）"></a>3、z-index 层覆盖先后顺序（优先级）</h4><h4 id="4、display-显示属性"><a href="#4、display-显示属性" class="headerlink" title="4、display 显示属性"></a>4、display 显示属性</h4><ul>
+<li>display:none：层不显示</li>
+<li>display:block：块状显示，在元素后面换行，显示下一个块元素</li>
+<li>display:inline：内联显示，多个块可以显示在一行内</li>
+</ul>
+<h4 id="5、float-浮动属性"><a href="#5、float-浮动属性" class="headerlink" title="5、float 浮动属性"></a>5、float 浮动属性</h4><ul>
+<li>left：左浮动</li>
+<li>right：右浮动</li>
+</ul>
+<h4 id="6、clear-清除浮动"><a href="#6、clear-清除浮动" class="headerlink" title="6、clear 清除浮动"></a>6、clear 清除浮动</h4><p>clear：both</p>
+<h4 id="7、overflow-溢出处理"><a href="#7、overflow-溢出处理" class="headerlink" title="7、overflow 溢出处理"></a>7、overflow 溢出处理</h4><ul>
+<li>hidden：隐藏超出层大小的内容</li>
+<li>scroll：无论内容是否超出层大小都添加滚动条</li>
+<li>auto：超出时自动添加滚动条</li>
+</ul>
+<h3 id="4、兼容问题及高效开发工具"><a href="#4、兼容问题及高效开发工具" class="headerlink" title="4、兼容问题及高效开发工具"></a>4、兼容问题及高效开发工具</h3><h4 id="1、兼容性测试工具"><a href="#1、兼容性测试工具" class="headerlink" title="1、兼容性测试工具"></a>1、兼容性测试工具</h4><ul>
+<li>IE Tester</li>
+<li>Multibrowser</li>
+</ul>
+<h4 id="2、常用的浏览器"><a href="#2、常用的浏览器" class="headerlink" title="2、常用的浏览器"></a>2、常用的浏览器</h4><ul>
+<li>Google chrome</li>
+<li>Firefox</li>
+<li>opera</li>
+</ul>
+<h4 id="3、高效的开发工具"><a href="#3、高效的开发工具" class="headerlink" title="3、高效的开发工具"></a>3、高效的开发工具</h4><ul>
+<li>Notepad++</li>
+<li>sbulime Text</li>
+<li>记事本</li>
+<li>WebStorm</li>
+<li>Dreamweaver</li>
+</ul>
+<h4 id="4、网页设计工具"><a href="#4、网页设计工具" class="headerlink" title="4、网页设计工具"></a>4、网页设计工具</h4><ul>
+<li>fireworks</li>
+<li>photoshop</li>
+</ul>
+<h4 id="5、判断IE的方法"><a href="#5、判断IE的方法" class="headerlink" title="5、判断IE的方法"></a>5、判断IE的方法</h4><ul>
+<li>条件判断格式：<!--[if 条件 版本]> 那么显示 <![endif]--></li>
+<li>不等于：[if !IE 8]，除了IE8都可以显示</li>
+<li>小于：[if lt IE 5.5]，如果IE浏览器版本小于5.5的显示</li>
+<li>大于：[if gt IE 5]，如果IE浏览器版本大于5的显示</li>
+<li>小于或者等于：[if lte IE 6]，如果IE浏览器版本小于6的显示</li>
+<li>大于或等于：[if gte IE 7]，如果IE浏览器版本小于7的显示</li>
+<li>大于和小于之间：[if (gt IE 5)&amp;(lt IE 7)]，如果IE浏览器版本大于IE5小于7的显示</li>
+<li>或：[if (IE 6)|(IE 7)]，如果是IE6或者IE7显示</li>
+<li>仅：&lt;!–[if IE 8]&gt;，如果是IE8 </li>
+</ul>
+</div></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2018 <a rel="nofollow" target="_blank" href="http://www.miitbeian.gov.cn/">京ICP备17062560号</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/3.2.5/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/3.2.5/jquery.fancybox.min.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
